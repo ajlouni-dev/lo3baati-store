@@ -1,0 +1,12 @@
+nav .brand-big a {
+	display: block;
+	width: 100%;
+}
+
+nav .brand-big a img {
+	width: 100%;
+}
+
+.hide-by-firas {
+	display: none;
+}
