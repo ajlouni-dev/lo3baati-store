@@ -20,9 +20,11 @@ class Common
             URL::forceScheme('https');
         }*/
         //get general setting value
-        $general_setting =  Cache::remember('general_setting', 60*60*24*365, function () {
-            return DB::table('general_settings')->latest()->first();
-        });
+        // $general_setting =  Cache::remember('general_setting', 60*60*24*365, function () {
+        //     return DB::table('general_settings')->latest()->first();
+        // });
+
+        $general_setting = DB::table('general_settings')->latest()->first();
 
         $todayDate = date("Y-m-d");
         if(config('database.connections.saleprosaas_landlord')) {

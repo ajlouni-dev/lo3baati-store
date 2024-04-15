@@ -55,9 +55,10 @@ class LoginController extends Controller
         else
             $theme = 'light';
         //get general setting value
-        $general_setting =  Cache::remember('general_setting', 60*60*24*365, function () {
-            return DB::table('general_settings')->latest()->first();
-        });
+        // $general_setting =  Cache::remember('general_setting', 60*60*24*365, function () {
+        //     return DB::table('general_settings')->latest()->first();
+        // });
+        $general_setting = DB::table('general_settings')->latest()->first();
 
         if(!$general_setting) {
             \DB::unprepared(file_get_contents('public/tenant_necessary.sql'));
