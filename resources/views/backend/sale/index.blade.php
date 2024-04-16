@@ -855,6 +855,10 @@
         }
     }
 
+    if(warehouse_id == 0) {warehouse_id = 1;}
+    if(sale_status == 0) {sale_status = "completed";}
+    if(payment_status == 0) {payment_status = "paid";}
+
     $('#sale-table').DataTable( {
         "processing": true,
         "serverSide": true,

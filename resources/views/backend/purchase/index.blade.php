@@ -568,6 +568,10 @@
         $(".change").text(parseFloat( $(this).val() - $('input[name="edit_amount"]').val() ).toFixed({{$general_setting->decimal}}));
     });
 
+    if(warehouse_id == 0) {warehouse_id = 1;}
+    if(purchase_status == 0) {purchase_status = "completed";}
+    if(payment_status == 0) {payment_status = "paid";}
+
     $('#purchase-table').DataTable( {
         "processing": true,
         "serverSide": true,
