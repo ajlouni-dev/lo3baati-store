@@ -48,7 +48,8 @@
                                         <span class="validation-msg" id="code-error"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <input type="hidden" name="barcode_symbology" value="C128">
+                                <div class="col-md-4 hide-by-firas">
                                     <div class="form-group">
                                         <label>{{trans('file.Barcode Symbology')}} *</strong> </label>
                                         <div class="input-group">

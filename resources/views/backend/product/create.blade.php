@@ -44,19 +44,11 @@
                                         <span class="validation-msg" id="code-error"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <input type="hidden" name="barcode_symbology" value="C128">
+                                <div class="col-md-4 hide-by-firas">
                                     <div class="form-group">
                                         <label>{{trans('file.Barcode Symbology')}} *</strong> </label>
-                                        <div class="input-group">
-                                            <select name="barcode_symbology" required class="form-control selectpicker">
-                                                <option value="C128">Code 128</option>
-                                                <option value="C39">Code 39</option>
-                                                <option value="UPCA">UPC-A</option>
-                                                <option value="UPCE">UPC-E</option>
-                                                <option value="EAN8">EAN-8</option>
-                                                <option value="EAN13">EAN-13</option>
-                                            </select>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div id="digital" class="col-md-4">
