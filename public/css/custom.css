@@ -10,3 +10,7 @@ nav .brand-big a img {
 .hide-by-firas {
 	display: none;
 }
+
+.table thead {
+    color: #14726b;
+}
