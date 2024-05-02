@@ -149,7 +149,10 @@
                                       </div>
                                     </div>
                                 </div>
-                                <div id="unit" class="col-md-12">
+                                <input type="hidden" name="unit_id" value="1">
+                                <input type="hidden" name="sale_unit_id" value="1">
+                                <input type="hidden" name="purchase_unit_id" value="1">
+                                {{-- <div id="unit" class="col-md-12">
                                     <div class="row ">
                                         <div class="col-md-4">
                                                 <label>{{trans('file.Product Unit')}} *</strong> </label>
@@ -183,7 +186,7 @@
                                                 </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div id="cost" class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.Product Cost')}} *</strong> </label>
@@ -355,7 +358,7 @@
                                         <textarea name="product_details" class="form-control" rows="5">{{str_replace('@', '"', $lims_product_data->product_details)}}</textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 mt-2" id="diffPrice-option">
+                                {{-- <div class="col-md-12 mt-2" id="diffPrice-option">
                                     @if($lims_product_data->is_diffPrice)
                                         <h5><input name="is_diffPrice" type="checkbox" id="is-diffPrice" value="1" checked>&nbsp; {{trans('file.This product has different price for different warehouse')}}</h5>
                                     @else
@@ -495,7 +498,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
+                                <input type="hidden" name="starting_date" value="{{$lims_product_data->starting_date}}" id="starting_date"/>
+                                <input type="hidden" name="last_date" value="{{$lims_product_data->last_date}}" id="ending_date"/>
                                 @if (\Schema::hasColumn('products', 'woocommerce_product_id'))
                                 <div class="col-md-12 mt-3">
                                     <h5><input name="is_sync_disable" {{$lims_product_data->is_sync_disable==1 ? 'checked':''}} type="checkbox" id="is_sync_disable" value="1">&nbsp; {{trans('file.Disable Woocommerce Sync')}}</h5>
@@ -1495,13 +1500,13 @@
                                 location.href = redirectUrl;
                             },
                             error:function(response) {
-                                //console.log(response);
-                              if(response.responseJSON.errors.name) {
-                                  $("#name-error").text(response.responseJSON.errors.name);
-                              }
-                              else if(response.responseJSON.errors.code) {
-                                  $("#code-error").text(response.responseJSON.errors.code);
-                              }
+                                console.log(response);
+                              // if(response.responseJSON.errors.name) {
+                              //     $("#name-error").text(response.responseJSON.errors.name);
+                              // }
+                              // else if(response.responseJSON.errors.code) {
+                              //     $("#code-error").text(response.responseJSON.errors.code);
+                              // }
                             },
                         });
                     }

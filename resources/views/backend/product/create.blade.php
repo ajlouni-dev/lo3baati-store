@@ -107,7 +107,10 @@
                                       <span class="validation-msg"></span>
                                     </div>
                                 </div>
-                                <div id="unit" class="col-md-12">
+                                <input type="hidden" name="unit_id" value="1">
+                                <input type="hidden" name="sale_unit_id" value="1">
+                                <input type="hidden" name="purchase_unit_id" value="1">
+                                {{-- <div id="unit" class="col-md-12">
                                     <div class="row ">
                                         <div class="col-md-4 form-group">
                                                 <label>{{trans('file.Product Unit')}} *</strong> </label>
@@ -140,7 +143,7 @@
                                                 </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div id="cost" class="col-md-4">
                                      <div class="form-group">
                                         <label>{{trans('file.Product Cost')}} *</strong> </label>
@@ -296,7 +299,7 @@
                                         <textarea name="product_details" class="form-control" rows="3"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 mt-3" id="variant-option">
+                                {{-- <div class="col-md-12 mt-3" id="variant-option">
                                     <h5><input name="is_variant" type="checkbox" id="is-variant" value="1">&nbsp; {{trans('file.This product has variant')}}</h5>
                                 </div>
                                 <div class="col-md-12" id="variant-section">
@@ -392,7 +395,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
+                                <input type="hidden" name="starting_date" id="starting_date"/>
+                                <input type="hidden" name="last_date" id="ending_date"/>
                                 @if (\Schema::hasColumn('products', 'woocommerce_product_id'))
                                 <div class="col-md-12 mt-3">
                                     <h5><input name="is_sync_disable" type="checkbox" id="is_sync_disable" value="1">&nbsp; {{trans('file.Disable Woocommerce Sync')}}</h5>
@@ -1157,7 +1162,7 @@
         else
             $("#diffPrice-section").hide(300);
     });
-
+    $("#starting_date").val($.datepicker.formatDate('dd-mm-yy', new Date()));
     $( "#promotion" ).on( "change", function() {
         if ($(this).is(':checked')) {
             $("#starting_date").val($.datepicker.formatDate('dd-mm-yy', new Date()));
@@ -1171,7 +1176,6 @@
             $("#last_date").hide(300);
         }
     });
-
     var starting_date = $('#starting_date');
     starting_date.datepicker({
      format: "dd-mm-yyyy",
