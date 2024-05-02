@@ -14,3 +14,8 @@ nav .brand-big a img {
 .table thead {
     color: #14726b;
 }
+
+.btn-primary:hover {
+    background-color: #f97c0b;
+    border-color: #f97c0b;
+}

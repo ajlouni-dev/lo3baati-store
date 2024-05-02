@@ -84,7 +84,7 @@
   <link rel="stylesheet" href="<?php echo asset('vendor/bootstrap/css/bootstrap-rtl.min.css') ?>" type="text/css">
   <link rel="stylesheet" href="<?php echo asset('css/custom-rtl.css') ?>" type="text/css" id="custom-style">
   @endif
-  <link rel="stylesheet" href="<?php echo asset('css/custom.css') ?>">
+  <link rel="stylesheet" href="<?php echo asset('css/custom.css?v=2') ?>">
   @else
   <link rel="icon" type="image/png" href="{{url('../../logo', $general_setting->site_logo)}}" />
   <title>{{$general_setting->site_title}}</title>
