@@ -79,6 +79,9 @@ $(document).ready(function () {
     }
     $(document).on('click', 'nav.side-navbar .close', function(){
         $('nav.side-navbar').addClass('shrink');
+        if ($(window).outerWidth() < 1199) {
+            $('.page').addClass('active-sm');
+        }
     })
     
     $('.pos-page nav.side-navbar').addClass('shrink');

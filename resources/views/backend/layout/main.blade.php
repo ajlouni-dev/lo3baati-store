@@ -1280,6 +1280,10 @@
     $('.selectpicker').selectpicker({
       style: 'btn-link',
     });
+
+    if ($(window).outerWidth() < 1199) {
+        $('.page').addClass('active-sm');
+    }
   </script>
 </body>
 
