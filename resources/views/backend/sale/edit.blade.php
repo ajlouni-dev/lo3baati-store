@@ -39,7 +39,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <input type="hidden" name="warehouse_id_hidden" value="{{$lims_sale_data->warehouse_id}}" />
+                                    <input type="hidden" id="warehouse_id" name="warehouse_id" value="1">
+                                    {{-- <div class="col-md-4">
                                         <div class="form-group">
                                             <label>{{trans('file.Warehouse')}} *</label>
                                             <input type="hidden" name="warehouse_id_hidden" value="{{$lims_sale_data->warehouse_id}}" />
@@ -49,7 +51,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label>{{trans('file.Biller')}} *</label>
@@ -505,14 +507,15 @@
             <div class="modal-body">
               <p class="italic"><small>{{trans('file.The field labels marked with * are required input fields')}}.</small></p>
                 <div class="row">
-                  <div class="col-md-6 form-group warehouse-section">
+                    <input type="hidden" name="warehouse_id" value="1">
+                  {{-- <div class="col-md-6 form-group warehouse-section">
                       <label>{{trans('file.Warehouse')}} *</strong> </label>
                       <select required name="warehouse_id" class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select warehouse...">
                           @foreach($lims_warehouse_list as $warehouse)
                           <option value="{{$warehouse->id}}">{{$warehouse->name}}</option>
                           @endforeach
                       </select>
-                  </div>
+                  </div> --}}
                   <div class="col-md-6 form-group">
                       <label>{{trans('file.Cash in Hand')}} *</strong> </label>
                       <input type="number" name="cash_in_hand" required class="form-control">

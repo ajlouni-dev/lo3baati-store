@@ -22,7 +22,8 @@
                         <input type="hidden" name="ending_date" value="{{$ending_date}}" />
                     </div>
                 </div>
-                <div class="col-md-3 @if(\Auth::user()->role_id > 2){{'d-none'}}@endif">
+                <input type="hidden" name="warehouse_id" id="warehouse_id" value="1">
+                {{-- <div class="col-md-3 @if(\Auth::user()->role_id > 2){{'d-none'}}@endif">
                     <div class="form-group">
                         <label><strong>{{trans('file.Warehouse')}}</strong></label>
                         <select id="warehouse_id" name="warehouse_id" class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" >
@@ -32,7 +33,7 @@
                             @endforeach
                         </select>
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-md-3">
                     <div class="form-group">
                         <label><strong>{{trans('file.Purchase Status')}}</strong></label>

@@ -770,10 +770,12 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <input type="hidden" name="warehouse_id_hidden" value="{{$lims_sale_data->warehouse_id}}">
+                                    <input type="hidden" name="warehouse_id" id="warehouse_id" value="1">
+                                    {{-- <div class="col-md-2">
                                         <div class="form-group">
                                             @if($lims_pos_setting_data)
-                                            <input type="hidden" name="warehouse_id_hidden" value="{{$lims_sale_data->warehouse_id}}">
+
                                             @endif
                                             <select required id="warehouse_id" name="warehouse_id" class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select warehouse...">
                                                 @foreach($lims_warehouse_list as $warehouse)
@@ -781,7 +783,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             @if($lims_pos_setting_data)
