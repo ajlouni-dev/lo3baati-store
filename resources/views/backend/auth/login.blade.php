@@ -48,22 +48,18 @@
               <div class="form-group-material">
                 <input id="login-username" type="text" name="name" required class="input-material" value="">
                 <label for="login-username" class="label-material">{{trans('file.UserName')}}</label>
-                @if(session()->has('error'))
-                    <p>
-                        <strong>{{ session()->get('error') }}</strong>
-                    </p>
-                @endif
               </div>
-
               <div class="form-group-material">
                 <input id="login-password" type="password" name="password" required class="input-material" value="">
                 <label for="login-password" class="label-material">{{trans('file.Password')}}</label>
+              </div>
                 @if(session()->has('error'))
-                    <p>
+                <div class="form-group-material">
+                    <p style="direction: rtl;">
                         <strong>{{ session()->get('error') }}</strong>
                     </p>
+                </div>
                 @endif
-              </div>
               <button type="submit" class="btn btn-primary btn-block">{{trans('file.LogIn')}}</button>
             </form>
             {{-- @if(!env('USER_VERIFIED'))

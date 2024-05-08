@@ -943,5 +943,6 @@ return [
 	"Paying amount cannot be bigger than recieved amount" => "لا يمكن أن يكون المبلغ المستلم أقل من المبلغ المستوجب",
 	"Product created successfully" => "تمت إضافة منتج بنجاح",
 	"product exceeds alert quantity" => "بضائع تجاوزت كمية التنبيه",
+	"Username Or Password Are Wrong." => "اسم المستخدم أو كلمة المرور خاطئة.",
 ];
 ?>

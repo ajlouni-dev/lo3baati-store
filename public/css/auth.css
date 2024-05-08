@@ -192,7 +192,7 @@ input.input-material~label {
 	color: #aaa;
 	position: absolute;
 	top: 14px;
-	left: 0;
+	right: 0;
 	cursor: text;
 	-webkit-transition: all .2s;
 	transition: all .2s;
