@@ -304,3 +304,13 @@ input.form-control-custom:checked+label::before {
 	-webkit-box-shadow: 0 0 0 .2rem rgba(52, 58, 64, .5);
 	box-shadow: 0 0 0 .2rem rgba(52, 58, 64, .5)
 }
+
+#login-form p {
+	text-align: start;
+}
+
+#login-form p strong{
+	color: red;
+    font-style: italic;
+    font-size: 13px;
+}
